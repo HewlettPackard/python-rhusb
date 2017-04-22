@@ -1,9 +1,18 @@
-#
-#  Copyright (C) 2017, Hewlett-Packard Development Company
-#  Author: Dave Brookshire <dsb@hpe.com>
-#
-#
-from distutils.core import setup
+"""
+Python module which abstracts the USB-Serial interface to the RH-USB sensor
+
+Copyright (C) 2017, Hewlett-Packard Development Company
+Author: Dave Brookshire <dsb@hpe.com>
+
+"""
+from setuptools import setup, find_packages
+from os import path
+
+here = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='python-rhusb',
@@ -12,6 +21,16 @@ setup(
     url='https://github.com/brookshire/python-rhusb',
     license='Apache License Version 2.0',
     author='Dave Brookshire',
-    author_email='dave@brookshire.org',
-    description='Module which abstracts the USB-Serial Interface to the RH-USB sensor'
+    author_email='dsb@hpe.com',
+    description='Module which abstracts the USB-Serial Interface to the RH-USB sensor',
+    long_description=long_description,
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'Topic :: IoT :: Sensors',
+        'License:: Apache License Version 2.0',
+        'Programming Language :: Python 3',
+    ],
+    keywords='sensor sensors rh-usb temperature humidity',
+    py_modules=["rhusb"],
 )
