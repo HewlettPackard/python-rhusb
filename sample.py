@@ -6,7 +6,7 @@
 #
 import time
 
-from rhusb.sensor import RHUSB
+from src.rhusb.sensor import RHUSB
 
 delay = 1
 count = 10
