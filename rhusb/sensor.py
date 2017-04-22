@@ -5,7 +5,7 @@
 #
 
 import serial
-import datetime
+import time
 
 default_device = "/dev/ttyUSB0"
 default_speed = 9600
@@ -35,9 +35,9 @@ class RHUSB():
     def CMD(self, cmd):
         self.dev.flushInput()
         self.dev.flushOutput()
-        self.dev.write("{0}\r\n".format(CMD))
+        self.dev.write("{0}\r\n".format(cmd))
         time.sleep(0.5)
-        return ser.readline()
+        return self.dev.readline().strip()
 
     def PA(self):
         return self.CMD(cmd="PA")
