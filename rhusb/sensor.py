@@ -55,7 +55,7 @@ class RHUSB():
         """
         self.dev.flushInput()
         self.dev.flushOutput()
-        self.dev.write("{0}\r\n".format(cmd))
+        self.dev.write("{0}\r\n".format(cmd).encode())
         time.sleep(serial_delay)
         return self.dev.readline().strip()
 
