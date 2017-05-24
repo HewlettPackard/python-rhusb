@@ -37,4 +37,4 @@ if __name__ == '__main__':
             time.sleep(delay)
 
     except serial.serialutil.SerialException:
-        print("Error: Unable to open RH-USB Serial device.")
+        print("Error: Unable to open RH-USB Serial device {0}.".format(device))
