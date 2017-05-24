@@ -43,6 +43,31 @@ From Pypi:
 
 TBD
 
+## Running the Sample Script
+
+```
+C:\Python36-32\python.exe sample.py
+Platform: Windows
+Device: COM4
+
+PA: [b'42.1,74.1']
+C: [b'23.4 C']
+F: [b'74.1 F']
+H: [b'42.1 %RH']
+
+Starting 10 periodic readings every 1 seconds
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+--> b'42.1,74.1'
+```
+
 ## Running the tests
 
 TBD
