@@ -1,7 +1,8 @@
-FROM ubuntu:latest
+FROM centos:7
 ENV http_proxy http://proxy.houston.hpecorp.net:8088
 ENV https_proxy http://proxy.houston.hpecorp.net:8088
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y python34 python34-pip
+ADD https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm /root
+RUN yum install -y /root/epel-release-latest-7.noarch.rpm
+RUN yum install -y python34 python34-pip
 COPY . /usr/src/python-rhusb
 RUN cd /usr/src/python-rhusb && python setup.py bdist && pip install .
