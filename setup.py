@@ -12,7 +12,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='python-rhusb',
-    version='1.1',
+    version='1.1.0',
     packages=[''],
     url='https://github.com/HewlettPackard/python-rhusb.git',
     license='Apache License Version 2.0',
