@@ -5,4 +5,4 @@ ENV https_proxy http://proxy.houston.hpecorp.net:8088
 COPY . /usr/src/python-rhusb
 #RUN cd /usr/src/python-rhusb && python setup.py sdist && pip install dist/python-rhusb*.tar.gz
 #CMD cp /usr/src/python-rhusb/dist/python-rhusb*.tar.gz /output
-CMD cd /usr/src/python-rhusb && python setup.py sdist && ls dist
+CMD cd /usr/src/python-rhusb && python setup.py sdist && cp dist/python-rhusb*.tar.gz /output
